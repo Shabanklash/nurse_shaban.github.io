@@ -23,7 +23,6 @@
             margin: 0 auto;
         }
 
-        /* Header */
         .header {
             text-align: center;
             margin-bottom: 50px;
@@ -45,14 +44,12 @@
             font-size: 18px;
         }
 
-        /* Cards Grid */
         .terms-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
 
-        /* Term Card */
         .term-card {
             background: white;
             border-radius: 25px;
@@ -118,32 +115,17 @@
             border-radius: 20px;
         }
 
-        .empty-message {
-            text-align: center;
-            color: #aaa;
-            padding: 30px;
-            font-style: italic;
-        }
-
-        .add-btn {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background: #e9ecef;
-            border: none;
-            border-radius: 10px;
-            color: #0077b6;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 15px;
-            text-align: center;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        .add-btn:hover {
-            background: #0077b6;
+        .status-active {
+            background: #28a745;
             color: white;
+        }
+
+        .subject-link {
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
         }
 
         footer {
@@ -179,29 +161,13 @@
                     <h2>📘 الترم الأول</h2>
                     <p>Term 1</p>
                 </div>
-                <div class="subjects-list" id="term1-list">
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 1</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 2</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 3</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 4</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 5</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
+                <div class="subjects-list">
+                    <div class="subject-item"><span class="subject-name">📖 مادة 1</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 2</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 3</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 4</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 5</span><span class="subject-status">قريباً</span></div>
                 </div>
-              
             </div>
 
             <!-- الترم الثاني -->
@@ -210,60 +176,45 @@
                     <h2>📙 الترم الثاني</h2>
                     <p>Term 2</p>
                 </div>
-                <div class="subjects-list" id="term2-list">
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 1</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 2</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 3</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 4</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 5</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
+                <div class="subjects-list">
+                    <div class="subject-item"><span class="subject-name">📖 مادة 1</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 2</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 3</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 4</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 5</span><span class="subject-status">قريباً</span></div>
                 </div>
-                
             </div>
 
-            <!-- الترم الثالث -->
+            <!-- الترم الثالث (المواد الحقيقية) -->
             <div class="term-card">
                 <div class="term-header">
                     <h2>📕 الترم الثالث</h2>
-                    <p>Term 3</p>
+                    <p>Term 3 | 4-2025</p>
                 </div>
-                <div class="subjects-list" id="term3-list">
+                <div class="subjects-list">
+                    <a href="term-3/1-Adult-theory/" class="subject-link">
+                        <div class="subject-item">
+                            <span class="subject-name">🩺 Adult theory (نظري)</span>
+                            <span class="subject-status status-active">متاح ✅</span>
+                        </div>
+                    </a>
                     <div class="subject-item">
-                        <span class="subject-name">🩺 Adult theory</span>
-                        <span class="subject-status">✅ نشط</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">🏥 Adult Clinical</span>
-                        <span class="subject-status">فارغ</span>
+                        <span class="subject-name">🏥 Adult Clinical (سريري)</span>
+                        <span class="subject-status">قريباً</span>
                     </div>
                     <div class="subject-item">
                         <span class="subject-name">📊 Research in nursing</span>
-                        <span class="subject-status">فارغ</span>
+                        <span class="subject-status">قريباً</span>
                     </div>
                     <div class="subject-item">
                         <span class="subject-name">🧼 Infection Control</span>
-                        <span class="subject-status">فارغ</span>
+                        <span class="subject-status">قريباً</span>
                     </div>
                     <div class="subject-item">
                         <span class="subject-name">🧬 Pathophysiology</span>
-                        <span class="subject-status">فارغ</span>
+                        <span class="subject-status">قريباً</span>
                     </div>
                 </div>
-               
             </div>
 
             <!-- الترم الرابع -->
@@ -272,29 +223,13 @@
                     <h2>📗 الترم الرابع</h2>
                     <p>Term 4</p>
                 </div>
-                <div class="subjects-list" id="term4-list">
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 1</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 2</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 3</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 4</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 5</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
+                <div class="subjects-list">
+                    <div class="subject-item"><span class="subject-name">📖 مادة 1</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 2</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 3</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 4</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 5</span><span class="subject-status">قريباً</span></div>
                 </div>
-               
             </div>
 
             <!-- الترم الخامس -->
@@ -303,29 +238,13 @@
                     <h2>📓 الترم الخامس</h2>
                     <p>Term 5</p>
                 </div>
-                <div class="subjects-list" id="term5-list">
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 1</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 2</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 3</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 4</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 5</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
+                <div class="subjects-list">
+                    <div class="subject-item"><span class="subject-name">📖 مادة 1</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 2</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 3</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 4</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 5</span><span class="subject-status">قريباً</span></div>
                 </div>
-               
             </div>
 
             <!-- الترم السادس -->
@@ -334,111 +253,19 @@
                     <h2>📔 الترم السادس</h2>
                     <p>Term 6</p>
                 </div>
-                <div class="subjects-list" id="term6-list">
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 1</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 2</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 3</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 4</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
-                    <div class="subject-item">
-                        <span class="subject-name">📖 مادة 5</span>
-                        <span class="subject-status">فارغ</span>
-                    </div>
+                <div class="subjects-list">
+                    <div class="subject-item"><span class="subject-name">📖 مادة 1</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 2</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 3</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 4</span><span class="subject-status">قريباً</span></div>
+                    <div class="subject-item"><span class="subject-name">📖 مادة 5</span><span class="subject-status">قريباً</span></div>
                 </div>
-                
             </div>
         </div>
 
         <footer>
             <p>© 2025 كلية التمريض - المنصة الدراسية | إعداد: Shaban</p>
-            <p style="font-size: 12px; margin-top: 10px;">✏️ اضغط على "تعديل المواد" لتغيير أسماء المواد</p>
         </footer>
     </div>
-
-    <script>
-        function editTerm(termNumber) {
-            let newSubjects = [];
-            let termList = document.getElementById(`term${termNumber}-list`);
-            let items = termList.querySelectorAll('.subject-item');
-            
-            let message = `✏️ تعديل مواد الترم ${getTermName(termNumber)}\n\n`;
-            for(let i = 0; i < items.length; i++) {
-                let currentName = items[i].querySelector('.subject-name').innerText;
-                message += `المادة ${i+1}: (${currentName})\n`;
-            }
-            message += `\nاكتب الأسماء الجديدة للمواد 5 (كل سطر = مادة جديدة):`;
-            
-            let input = prompt(message);
-            if(input) {
-                let lines = input.split('\n').filter(l => l.trim() !== '');
-                for(let i = 0; i < Math.min(lines.length, 5); i++) {
-                    if(lines[i]) {
-                        let icon = getRandomIcon();
-                        items[i].querySelector('.subject-name').innerHTML = `${icon} ${lines[i].trim()}`;
-                        items[i].querySelector('.subject-status').innerText = '📝 تم التعديل';
-                        items[i].querySelector('.subject-status').style.color = '#28a745';
-                    }
-                }
-                saveToLocalStorage();
-                alert('✅ تم تعديل المواد بنجاح!');
-            }
-        }
-        
-        function getTermName(num) {
-            const names = ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس'];
-            return names[num-1];
-        }
-        
-        function getRandomIcon() {
-            const icons = ['📖', '🩺', '📊', '🧬', '💊', '🏥', '🔬', '📚', '✏️', '🧪'];
-            return icons[Math.floor(Math.random() * icons.length)];
-        }
-        
-        function saveToLocalStorage() {
-            for(let t = 1; t <= 6; t++) {
-                let termList = document.getElementById(`term${t}-list`);
-                let items = termList.querySelectorAll('.subject-item');
-                let subjects = [];
-                items.forEach(item => {
-                    subjects.push({
-                        name: item.querySelector('.subject-name').innerHTML,
-                        status: item.querySelector('.subject-status').innerText
-                    });
-                });
-                localStorage.setItem(`term${t}_subjects`, JSON.stringify(subjects));
-            }
-        }
-        
-        function loadFromLocalStorage() {
-            for(let t = 1; t <= 6; t++) {
-                let saved = localStorage.getItem(`term${t}_subjects`);
-                if(saved) {
-                    let subjects = JSON.parse(saved);
-                    let termList = document.getElementById(`term${t}-list`);
-                    let items = termList.querySelectorAll('.subject-item');
-                    for(let i = 0; i < subjects.length && i < items.length; i++) {
-                        items[i].querySelector('.subject-name').innerHTML = subjects[i].name;
-                        items[i].querySelector('.subject-status').innerText = subjects[i].status;
-                        if(subjects[i].status !== 'فارغ') {
-                            items[i].querySelector('.subject-status').style.color = '#28a745';
-                        }
-                    }
-                }
-            }
-        }
-        
-        loadFromLocalStorage();
-    </script>
 </body>
 </html>
