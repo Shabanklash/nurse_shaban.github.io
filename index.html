@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <title>Adult Theory - تمريض البالغين</title>
+    <title>كلية التمريض - المنصة الدراسية</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -12,121 +12,433 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             min-height: 100vh;
             padding: 40px 20px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
-            background: white;
-            border-radius: 25px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
 
-        h1 {
-            color: #0077b6;
+        /* Header */
+        .header {
             text-align: center;
-            font-size: 32px;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             margin-bottom: 10px;
         }
 
-        .subtitle {
+        .header h1 span {
+            color: #ffd700;
+        }
+
+        .header p {
+            color: #ccddee;
+            font-size: 18px;
+        }
+
+        /* Cards Grid */
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        /* Term Card */
+        .term-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .term-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            padding: 20px;
             text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #e0e0e0;
         }
 
-        h2 {
-            color: #023e8a;
-            margin: 25px 0 15px 0;
-            font-size: 24px;
+        .term-header h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
         }
 
-        .lecture-list {
-            list-style: none;
+        .term-header p {
+            font-size: 14px;
+            opacity: 0.9;
         }
 
-        .lecture-list li {
+        .subjects-list {
+            padding: 20px;
+        }
+
+        .subject-item {
             background: #f8f9fa;
             margin: 12px 0;
+            padding: 15px;
             border-radius: 12px;
-            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
             border-right: 4px solid #0077b6;
         }
 
-        .lecture-list li:hover {
+        .subject-item:hover {
             background: #e3f2fd;
             transform: translateX(-5px);
         }
 
-        .lecture-list a {
-            display: block;
-            padding: 18px 20px;
-            text-decoration: none;
+        .subject-name {
+            font-weight: 600;
             color: #023e8a;
-            font-size: 18px;
-            font-weight: 500;
+            font-size: 16px;
         }
 
-        .lecture-list a::before {
-            content: "📄 ";
-            font-size: 20px;
+        .subject-status {
+            font-size: 12px;
+            color: #999;
+            background: #e9ecef;
+            padding: 4px 12px;
+            border-radius: 20px;
         }
 
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 24px;
-            background: #0077b6;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
+        .empty-message {
             text-align: center;
+            color: #aaa;
+            padding: 30px;
+            font-style: italic;
+        }
+
+        .add-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #e9ecef;
+            border: none;
+            border-radius: 10px;
+            color: #0077b6;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            text-align: center;
+            text-decoration: none;
             transition: background 0.3s;
         }
 
-        .back-link:hover {
-            background: #023e8a;
+        .add-btn:hover {
+            background: #0077b6;
+            color: white;
         }
 
         footer {
             text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-            color: #888;
-            font-size: 14px;
+            margin-top: 60px;
+            padding: 30px;
+            color: #ccddee;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .terms-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🩺 تمريض البالغين (نظري)</h1>
-        <div class="subtitle">Adult Health Nursing - Theory</div>
+        <div class="header">
+            <h1>🏥 كلية التمريض <span>❖</span></h1>
+            <p>منصتك الدراسية الشاملة | جميع المواد والترام في مكان واحد</p>
+        </div>
 
-        <h2>📚 قائمة المحاضرات</h2>
-        <ul class="lecture-list">
-            <li><a href="lecture-1.html">المحاضرة 1: مقدمة في تمريض البالغين</a></li>
-            <li><a href="lecture-2.html">المحاضرة 2: الجهاز القلبي الوعائي</a></li>
-            <li><a href="lecture-3.html">المحاضرة 3: الجهاز التنفسي</a></li>
-            <li><a href="lecture-4.html">المحاضرة 4: الجهاز الهضمي</a></li>
-            <li><a href="lecture-5.html">المحاضرة 5: الجهاز البولي</a></li>
-            <li><a href="lecture-6.html">المحاضرة 6: الجهاز العصبي</a></li>
-            <li><a href="lecture-7.html">المحاضرة 7: الغدد الصماء</a></li>
-            <li><a href="lecture-8.html">المحاضرة 8: تمريض المسنين</a></li>
-        </ul>
+        <div class="terms-grid">
+            
+            <!-- الترم الأول -->
+            <div class="term-card">
+                <div class="term-header">
+                    <h2>📘 الترم الأول</h2>
+                    <p>Term 1</p>
+                </div>
+                <div class="subjects-list" id="term1-list">
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 1</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 2</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 3</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 4</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 5</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                </div>
+                <a href="#" class="add-btn" onclick="editTerm(1)">✏️ تعديل مواد الترم الأول</a>
+            </div>
 
-        <a href="../../" class="back-link">🔙 رجوع للصفحة الرئيسية</a>
-        
+            <!-- الترم الثاني -->
+            <div class="term-card">
+                <div class="term-header">
+                    <h2>📙 الترم الثاني</h2>
+                    <p>Term 2</p>
+                </div>
+                <div class="subjects-list" id="term2-list">
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 1</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 2</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 3</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 4</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 5</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                </div>
+                <a href="#" class="add-btn" onclick="editTerm(2)">✏️ تعديل مواد الترم الثاني</a>
+            </div>
+
+            <!-- الترم الثالث -->
+            <div class="term-card">
+                <div class="term-header">
+                    <h2>📕 الترم الثالث</h2>
+                    <p>Term 3</p>
+                </div>
+                <div class="subjects-list" id="term3-list">
+                    <div class="subject-item">
+                        <span class="subject-name">🩺 Adult theory</span>
+                        <span class="subject-status">✅ نشط</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">🏥 Adult Clinical</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📊 Research in nursing</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">🧼 Infection Control</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">🧬 Pathophysiology</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                </div>
+                <a href="term-3/" class="add-btn">➡️ دخول الترم الثالث</a>
+            </div>
+
+            <!-- الترم الرابع -->
+            <div class="term-card">
+                <div class="term-header">
+                    <h2>📗 الترم الرابع</h2>
+                    <p>Term 4</p>
+                </div>
+                <div class="subjects-list" id="term4-list">
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 1</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 2</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 3</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 4</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 5</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                </div>
+                <a href="#" class="add-btn" onclick="editTerm(4)">✏️ تعديل مواد الترم الرابع</a>
+            </div>
+
+            <!-- الترم الخامس -->
+            <div class="term-card">
+                <div class="term-header">
+                    <h2>📓 الترم الخامس</h2>
+                    <p>Term 5</p>
+                </div>
+                <div class="subjects-list" id="term5-list">
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 1</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 2</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 3</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 4</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 5</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                </div>
+                <a href="#" class="add-btn" onclick="editTerm(5)">✏️ تعديل مواد الترم الخامس</a>
+            </div>
+
+            <!-- الترم السادس -->
+            <div class="term-card">
+                <div class="term-header">
+                    <h2>📔 الترم السادس</h2>
+                    <p>Term 6</p>
+                </div>
+                <div class="subjects-list" id="term6-list">
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 1</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 2</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 3</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 4</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                    <div class="subject-item">
+                        <span class="subject-name">📖 مادة 5</span>
+                        <span class="subject-status">فارغ</span>
+                    </div>
+                </div>
+                <a href="#" class="add-btn" onclick="editTerm(6)">✏️ تعديل مواد الترم السادس</a>
+            </div>
+        </div>
+
         <footer>
-            📚 مكتبة التمريض | إعداد: Shaban
+            <p>© 2025 كلية التمريض - المنصة الدراسية | إعداد: Shaban</p>
+            <p style="font-size: 12px; margin-top: 10px;">✏️ اضغط على "تعديل المواد" لتغيير أسماء المواد</p>
         </footer>
     </div>
+
+    <script>
+        function editTerm(termNumber) {
+            let newSubjects = [];
+            let termList = document.getElementById(`term${termNumber}-list`);
+            let items = termList.querySelectorAll('.subject-item');
+            
+            let message = `✏️ تعديل مواد الترم ${getTermName(termNumber)}\n\n`;
+            for(let i = 0; i < items.length; i++) {
+                let currentName = items[i].querySelector('.subject-name').innerText;
+                message += `المادة ${i+1}: (${currentName})\n`;
+            }
+            message += `\nاكتب الأسماء الجديدة للمواد 5 (كل سطر = مادة جديدة):`;
+            
+            let input = prompt(message);
+            if(input) {
+                let lines = input.split('\n').filter(l => l.trim() !== '');
+                for(let i = 0; i < Math.min(lines.length, 5); i++) {
+                    if(lines[i]) {
+                        let icon = getRandomIcon();
+                        items[i].querySelector('.subject-name').innerHTML = `${icon} ${lines[i].trim()}`;
+                        items[i].querySelector('.subject-status').innerText = '📝 تم التعديل';
+                        items[i].querySelector('.subject-status').style.color = '#28a745';
+                    }
+                }
+                saveToLocalStorage();
+                alert('✅ تم تعديل المواد بنجاح!');
+            }
+        }
+        
+        function getTermName(num) {
+            const names = ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس'];
+            return names[num-1];
+        }
+        
+        function getRandomIcon() {
+            const icons = ['📖', '🩺', '📊', '🧬', '💊', '🏥', '🔬', '📚', '✏️', '🧪'];
+            return icons[Math.floor(Math.random() * icons.length)];
+        }
+        
+        function saveToLocalStorage() {
+            for(let t = 1; t <= 6; t++) {
+                let termList = document.getElementById(`term${t}-list`);
+                let items = termList.querySelectorAll('.subject-item');
+                let subjects = [];
+                items.forEach(item => {
+                    subjects.push({
+                        name: item.querySelector('.subject-name').innerHTML,
+                        status: item.querySelector('.subject-status').innerText
+                    });
+                });
+                localStorage.setItem(`term${t}_subjects`, JSON.stringify(subjects));
+            }
+        }
+        
+        function loadFromLocalStorage() {
+            for(let t = 1; t <= 6; t++) {
+                let saved = localStorage.getItem(`term${t}_subjects`);
+                if(saved) {
+                    let subjects = JSON.parse(saved);
+                    let termList = document.getElementById(`term${t}-list`);
+                    let items = termList.querySelectorAll('.subject-item');
+                    for(let i = 0; i < subjects.length && i < items.length; i++) {
+                        items[i].querySelector('.subject-name').innerHTML = subjects[i].name;
+                        items[i].querySelector('.subject-status').innerText = subjects[i].status;
+                        if(subjects[i].status !== 'فارغ') {
+                            items[i].querySelector('.subject-status').style.color = '#28a745';
+                        }
+                    }
+                }
+            }
+        }
+        
+        loadFromLocalStorage();
+    </script>
 </body>
 </html>
